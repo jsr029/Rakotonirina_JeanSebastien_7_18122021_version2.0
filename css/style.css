@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "DM Sans";
+  src: url("../../../fonts/DMSans-Regular.ttf") format("ttf"), url("../../../fonts/DMSans-Bold.ttf") format("ttf"), url("../../../fonts/DMSans-Italic.ttf") format("ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  font-family: "DM Sans";
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1240px !important;
+  margin: auto;
+  margin-top: 20px;
+}
+
+header, main {
+  flex: 1;
+}
+
+.logoTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.logoTitle_title {
+  color: #D04F4F;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+}
+.logoTitle_bloc {
+  width: 100%;
+  position: relative;
+}
+.logoTitle_bloc-search {
+  width: 100%;
+  background: #E7E7E7;
+  border-radius: 5px;
+  font-size: 1.125rem;
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  border: none;
+}
+.logoTitle_bloc-search:focus {
+  outline: none !important;
+  border: 1px solid #E7E7E7;
+}
+.logoTitle_bloc-loupe {
+  position: absolute;
+  bottom: 1rem;
+  right: 0.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */

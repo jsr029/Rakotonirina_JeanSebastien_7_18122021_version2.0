@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "DM Sans";
+    src: url("../../../fonts/DMSans-Regular.ttf") format("ttf"),
+        url("../../../fonts/DMSans-Bold.ttf") format("ttf"),
+        url("../../../fonts/DMSans-Italic.ttf") format("ttf");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    position: relative;
+    font-family: "DM Sans";
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1240px !important;
+    margin: auto;
+    margin-top: 20px;
+}
+header, main{
+    flex: 1;
+}

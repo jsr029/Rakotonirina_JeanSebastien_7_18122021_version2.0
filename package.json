@@ -1,0 +1,22 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "P7 Build an search algorithm with js",
+  "main": "./js/index.js",
+  "scripts": {
+    "sass": "sass --watch ./css/sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021_version2.0.git"
+  },
+  "keywords": [
+    "algorithm"
+  ],
+  "author": "jsr029",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021_version2.0/issues"
+  },
+  "homepage": "https://github.com/jsr029/Rakotonirina_JeanSebastien_7_18122021_version2.0#readme"
+}
