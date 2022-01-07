@@ -1,0 +1,70 @@
+.tags,
+.dropdown {
+    margin: .5rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.dropdown_ingredients,
+.dropdown_appliance,
+.dropdown_ustensils {
+    &-button {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        height: 49px;
+        width: 170px;
+        left: 0px;
+        top: 0px;
+        border-radius: 5px;
+    }
+}
+
+.content {
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 20px;
+    row-gap: 20px;
+    margin-top: 20px;
+
+    .articles_bloc {
+        width: 380px;
+        height: 364px;
+        background: #E7E7E7;
+        font-size: .75rem;
+
+        .data_bloc--ingredients {
+            width: 47%;
+            list-style-type: none;
+            margin-left: 5px;
+            float: left;
+        }
+
+        .data_bloc--description {
+            width: 48%;
+            list-style-type: none;
+            margin-right: 5px;
+            float: right;
+            text-align: justify;
+        }
+
+        .media {
+            width: 380px;
+            height: 178px;
+            background: #C7BEBE;
+        }
+
+        h2 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            font-size: 1.125rem;
+            margin: 5px;
+        }
+    }
+}

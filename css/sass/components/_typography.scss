@@ -17,6 +17,7 @@
             font-size: 1.125rem;
             padding: 1.5rem 0 1.5rem 1.5rem;
             border: none;
+            font-family: 'Lato';
 
             &:focus {
                 outline: none !important;
@@ -30,5 +31,51 @@
             right: 0.5rem;
         }
     }
-
 }
+
+.dropdown_ingredients,
+.dropdown_appliance,
+.dropdown_ustensils {
+
+    &-button {
+        font-family: 'Lato';
+        font-size: 1.125rem;
+        color: white;
+        border: none;
+    }
+}
+
+.dropdown_ingredients-button {
+    background: #3282F7;
+}
+.dropdown_ingredients-buttonSearch{
+    outline: none !important;
+    border: none;
+    background: #3282F7;
+    &::placeholder{
+        color: white;
+        }
+    }
+.dropdown_appliance-button {
+    background: #ED6454;
+}
+.dropdown_appliance-buttonSearch{
+    outline: none !important;
+    border: none;
+    background: #ED6454;
+    &::placeholder{
+    color: white;
+    }
+}
+
+.dropdown_ustensils-button {
+    background: #68D9A4;
+}
+.dropdown_ustensils-buttonSearch{
+    outline: none !important;
+    border: none;
+    background: #68D9A4;
+    &::placeholder{
+        color: white;
+        }
+    }
