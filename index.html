@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/style.css">
         <title>Les Petits Plats</title>
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     </head>
     <body>
         <div class="container">
@@ -21,15 +22,19 @@
                         class="logoTitle_bloc-loupe">
                 </span>
             </header>
-            <div class="tags"></div>
+            <div class="tags">
+                <div class="tags_ingredients"></div>
+                <div class="tags_appliance"></div>
+                <div class="tags_ustensils"></div>
+            </div>
             <div class="dropdown">
                 <div class="dropdown_ingredients">
                     <div class="dropdown_ingredients-button">
                     <input type="text" class="dropdown_ingredients-buttonSearch"
                         aria-label="input ingredients"
                         placeholder="Rechercher un ingrédient...">
-                        Ingrédients
-                        <i class="fa fa-angle-down"></i>
+                        <h2>Ingrédients</h2>
+                        <i class="icon-angle-down"></i>
                     </div>
                     <div class="ingredientsResult"></div>
                 </div>                
@@ -38,8 +43,8 @@
                     <input type="text" class="dropdown_appliance-buttonSearch"
                         aria-label="input appliance"
                         placeholder="Rechercher un appareil...">
-                        Appliance
-                        <i class="fa fa-angle-down"></i>
+                        <h2>Appliance</h2>
+                        <i class="icon-angle-down"></i>
                     </div>
                     <div class="applianceResult"></div>
                 </div>
@@ -48,8 +53,8 @@
                     <input type="text" class="dropdown_ustensils-buttonSearch"
                         aria-label="input ustensils"
                         placeholder="Rechercher un ustensile...">
-                        Ustensils
-                        <i class="fa fa-angle-down"></i>
+                        <h2>Ustensils</h2>
+                        <i class="icon-angle-down"></i>
                     </div>
                     <div class="ustensilsResult"></div>
                 </div>
@@ -58,7 +63,5 @@
             </main>
         </div>
         <script src="./js/index.js" type="module"></script>
-        <script src="https://kit.fontawesome.com/a773d24a5d.js"
-            crossorigin="anonymous"></script>
     </body>
 </html>

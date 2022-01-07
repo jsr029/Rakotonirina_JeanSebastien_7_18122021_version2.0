@@ -1,0 +1,19 @@
+.dropdown {
+    &_ingredients {
+        &-buttonSearch {
+            display: none;
+        }
+    }
+
+    &_appliance {
+        &-buttonSearch {
+            display: none;
+        }
+    }
+
+    &_ustensils {
+        &-buttonSearch {
+            display: none;
+        }
+    }
+}

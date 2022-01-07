@@ -185,4 +185,14 @@ header, main, .tags, .dropdown {
   margin: 5px;
 }
 
+.dropdown_ingredients-buttonSearch {
+  display: none;
+}
+.dropdown_appliance-buttonSearch {
+  display: none;
+}
+.dropdown_ustensils-buttonSearch {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */
