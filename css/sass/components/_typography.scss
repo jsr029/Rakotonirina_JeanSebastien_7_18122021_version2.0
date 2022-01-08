@@ -47,35 +47,52 @@
 
 .dropdown_ingredients-button {
     background: #3282F7;
+
+    h2 {
+        font-size: 1.125rem;
+    }
 }
-.dropdown_ingredients-buttonSearch{
+
+.dropdown_ingredients-buttonSearch {
     outline: none !important;
     border: none;
     background: #3282F7;
-    &::placeholder{
+
+    &::placeholder {
         color: white;
-        }
     }
+}
+
 .dropdown_appliance-button {
     background: #ED6454;
+    h2 {
+        font-size: 1.125rem;
+    }
 }
-.dropdown_appliance-buttonSearch{
+
+.dropdown_appliance-buttonSearch {
     outline: none !important;
     border: none;
     background: #ED6454;
-    &::placeholder{
-    color: white;
+
+    &::placeholder {
+        color: white;
     }
 }
 
 .dropdown_ustensils-button {
     background: #68D9A4;
+    h2 {
+        font-size: 1.125rem;
+    }
 }
-.dropdown_ustensils-buttonSearch{
+
+.dropdown_ustensils-buttonSearch {
     outline: none !important;
     border: none;
     background: #68D9A4;
-    &::placeholder{
+
+    &::placeholder {
         color: white;
-        }
     }
+}
