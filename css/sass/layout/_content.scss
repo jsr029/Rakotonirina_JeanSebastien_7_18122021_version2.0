@@ -7,7 +7,9 @@
     column-gap: 20px;
     row-gap: 20px;
     z-index: 1000;
-
+    i{
+        cursor: pointer;
+    }
     &_ingredients {
         .ingredientsResult {
             position: absolute;

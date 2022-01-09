@@ -2,18 +2,27 @@
     &_ingredients {
         &-buttonSearch {
             display: none;
+            &:focus{
+                color: white;
+            }
         }
     }
 
     &_appliance {
         &-buttonSearch {
             display: none;
+            &:focus{
+                color: white;
+            }
         }
     }
 
     &_ustensils {
         &-buttonSearch {
             display: none;
+            &:focus{
+                color: white;
+            }
         }
     }
 }
