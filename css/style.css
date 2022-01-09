@@ -135,12 +135,17 @@ header, main, .tags, .dropdown {
   margin: 0.5rem 0;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   column-gap: 20px;
+  row-gap: 20px;
+  z-index: 1000;
 }
 .tags_ingredients .ingredientsResult,
 .dropdown_ingredients .ingredientsResult {
   position: absolute;
   max-width: 620px;
+  max-height: 400px;
+  overflow: hidden;
   display: none;
   flex-direction: row;
   flex-wrap: wrap;
@@ -153,6 +158,7 @@ header, main, .tags, .dropdown {
 }
 .tags_ingredients a,
 .dropdown_ingredients a {
+  width: 150px;
   color: white;
   padding: 5px;
   font-size: 1.125rem;
@@ -164,11 +170,10 @@ header, main, .tags, .dropdown {
 .tags_appliance .applianceResult,
 .dropdown_appliance .applianceResult {
   position: absolute;
-  max-width: 310px;
+  max-width: 500px;
   display: none;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
   color: white;
   background: #ED6454;
   border-radius: 0 0 5px 5px;
@@ -177,13 +182,38 @@ header, main, .tags, .dropdown {
 }
 .tags_appliance a,
 .dropdown_appliance a {
+  width: 150px;
   color: white;
-  padding: 5px;
+  padding: 5px 5px 5px 10px;
   font-size: 1.125rem;
 }
 .tags_appliance a:hover,
 .dropdown_appliance a:hover {
   background: #f28e82;
+}
+.tags_ustensils .ustensilsResult,
+.dropdown_ustensils .ustensilsResult {
+  position: absolute;
+  max-width: 520px;
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: white;
+  background: #68D9A4;
+  border-radius: 0 0 5px 5px;
+  z-index: 200;
+  font-size: 1.125rem;
+}
+.tags_ustensils a,
+.dropdown_ustensils a {
+  width: 150px;
+  color: white;
+  padding: 5px 5px 5px 10px;
+  font-size: 1.125rem;
+}
+.tags_ustensils a:hover,
+.dropdown_ustensils a:hover {
+  background: #91e3bd;
 }
 
 .dropdown_ingredients-button,
@@ -205,6 +235,7 @@ header, main, .tags, .dropdown {
 .content {
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-around;
   column-gap: 20px;
   row-gap: 20px;
   margin-top: 20px;
@@ -218,12 +249,17 @@ header, main, .tags, .dropdown {
   background: #E7E7E7;
   font-size: 0.75rem;
   border-radius: 5px;
+  line-height: 1rem;
 }
 .content .articles_bloc .data_bloc--ingredients {
   width: 47%;
   list-style-type: none;
   margin-left: 5px;
   float: left;
+  line-height: 1rem;
+}
+.content .articles_bloc .data_bloc--ingredients .strong {
+  font-weight: bold;
 }
 .content .articles_bloc .data_bloc--description {
   width: 48%;

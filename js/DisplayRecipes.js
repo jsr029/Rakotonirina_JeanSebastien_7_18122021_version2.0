@@ -14,7 +14,7 @@ class DisplayRecipies{
                             <img src="./img/time.png" alt="Horloge"> ${data[i].time} min
                         </span>
                     </h2>
-        `;
+            `;
             section.insertAdjacentHTML("afterbegin", boxRecipie);
             let article = document.querySelector('article');
             let ulcreate = document.createElement('ul');
@@ -24,11 +24,11 @@ class DisplayRecipies{
             for (let a = 0; a < data[i].ingredients.length; a++) {
                 let boxRecipieP = `
                 <li>
-                    ${data[i].ingredients[a].ingredient ? data[i].ingredients[a].ingredient : ''}:
+                    ${data[i].ingredients[a].ingredient ? '<span class="strong">'+data[i].ingredients[a].ingredient+'</span> : ' : ''}
                     ${data[i].ingredients[a].quantity ? data[i].ingredients[a].quantity : ''}
                     ${data[i].ingredients[a].unit ? data[i].ingredients[a].unit : ''}
                 </li>
-        `;
+                `;
                 ul.insertAdjacentHTML("beforeend", boxRecipieP);
             }
             let ulcreate2 = document.createElement('ul');
@@ -38,9 +38,9 @@ class DisplayRecipies{
             let boxDescr = `
             <li>${data[i].description.substr(0, 200) + '...'}</li>
             </article>
-        `;
+            `;
             ul2.insertAdjacentHTML("beforeend", boxDescr);
-        }
+        }            
     }
 }
 export default DisplayRecipies;

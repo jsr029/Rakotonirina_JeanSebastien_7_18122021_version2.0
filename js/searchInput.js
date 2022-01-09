@@ -57,14 +57,14 @@ let dropIList = function (data) {
         for (let j = 0; j < data[i].ingredients.length; j++) {
             boxIList.push(`
         <a class="dropdown-item" href="javascript:void(0)">
-            ${data[i].ingredients[j].ingredient}
+            ${data[i].ingredients[j].ingredient.length > 15 ? data[i].ingredients[j].ingredient.substr(0,15)+'...':data[i].ingredients[j].ingredient}
         </a>
         `);
         }
     }
     boxIList = [...new Set(boxIList)];
     boxIList.sort();
-    dropList.innerHTML = boxIList;
+    dropList.innerHTML = boxIList.join('');
 
     let dropListA = document.querySelector('.applianceResult');
     let boxIListA = [];
@@ -77,7 +77,22 @@ let dropIList = function (data) {
     }
     boxIListA = [...new Set(boxIListA)];
     boxIListA.sort();
-    dropListA.innerHTML = boxIListA;
+    dropListA.innerHTML = boxIListA.join('');
+
+    let dropListU = document.querySelector('.ustensilsResult');
+    let boxIListU = [];
+    for (let a = 0; a < data.length; a++) {
+        for (let b = 0; b < data[a].ustensils.length; b++) {
+                boxIListU.push(`
+            <a class="dropdown-item" href="javascript:void(0)">
+                ${data[a].ustensils[b].length > 15 ? data[a].ustensils[b].substr(0, 15)+'...' : data[a].ustensils[b]}
+            </a>
+            `);
+        }
+    }
+        boxIListU = [...new Set(boxIListU)];
+        boxIListU.sort();
+        dropListU.innerHTML = boxIListU.join('');
 
 };
 export default searchInput;
