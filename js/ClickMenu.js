@@ -64,23 +64,23 @@ let baseIng = function (data) {
     let baseResult = [];
     for (let i = 0; i < ingA.length; i++) {
         ingA[i].addEventListener('click', function (event) {
-        baseResult = [];
+            baseResult = [];
             let tagNameClicked = event.target.innerHTML.trim().toLowerCase();
             tagsIngredients.style.display = "flex";
             tagsIngredients.innerHTML = '<h2>' + tagNameClicked +
                 '</h2><span class="close"><img src="../img/cross.png" alt="close tag icon">';
-                for(let j=0; j < data.length; j++){
-                    for(let k=0; k < data[j].ingredients.length; k++){
-                        if(data[j].ingredients[k].ingredient.toLowerCase() == tagNameClicked){
-                            baseResult.push(data[j]);
-                        }
+            for (let j = 0; j < data.length; j++) {
+                for (let k = 0; k < data[j].ingredients.length; k++) {
+                    if (data[j].ingredients[k].ingredient.toLowerCase() == tagNameClicked) {
+                        baseResult.push(data[j]);
                     }
                 }
-                new DisplayRecipes().render(baseResult);
-                console.log(baseResult);
+            }
+            new DisplayRecipes().render(baseResult);
+            console.log(baseResult);
         });
     }
-    tagsIngredients.addEventListener("click", function(event){
+    tagsIngredients.addEventListener("click", function (event) {
         new DisplayRecipes().render(data);
     });
 
