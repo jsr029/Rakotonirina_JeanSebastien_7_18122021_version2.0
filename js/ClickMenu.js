@@ -69,7 +69,7 @@ let baseIng = function (data) {
             let tagNameClicked = event.target.innerHTML.trim().toLowerCase();
             tagsIngredients.style.display = "flex";
             tagsIngredients.innerHTML = '<h2>' + tagNameClicked +
-                '</h2><span class="close"><img src="../img/cross.png" alt="close tag icon">';
+                '</h2><span class="close"><img src="../img/cross.png" alt="close tag icon"></span>';
             for (let j = 0; j < data.length; j++) {
                 for (let k = 0; k < data[j].ingredients.length; k++) {
                     if (data[j].ingredients[k].ingredient.toLowerCase() == tagNameClicked) {
