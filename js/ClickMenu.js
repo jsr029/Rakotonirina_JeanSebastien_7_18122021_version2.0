@@ -78,7 +78,6 @@ let baseIng = function (data) {
                 }
             }
             new DisplayRecipes().render(baseResult);
-            console.log(baseResult);
         });
     }
     //When u close the tag, go back to initial data
