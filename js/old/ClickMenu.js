@@ -4,6 +4,9 @@ import recipes from "./recipes.js";
 class ClickMenu {
     render(data) {
         let tagsIngredients = document.querySelector('.tags_ingredients');
+        if (tagsIngredients.innerHTML.length == 0) {
+            tagsIngredients.style.display = 'none';
+        }
         let dropIA = document.querySelectorAll('.dropdown_ingredients a');
         dropIA.forEach(function (elm) {
             elm.addEventListener('click', function (event) {
@@ -27,7 +30,7 @@ class ClickMenu {
                 tagsAppliance.style.display = "flex";
                 let linkClicked = event.target;
                 tagsAppliance.innerHTML = '<h2>' + linkClicked.innerHTML +
-                '</h2><span class="close"><i class="icon-remove-circle"></i></span>';
+                    '</h2><span class="close"><img src="../img/cross.png" alt="close tag icon">';
             });
         });
         tagsAppliance.addEventListener('click', function (evt) {
@@ -44,7 +47,7 @@ class ClickMenu {
                 tagsUstensils.style.display = "flex";
                 let linkClicked = event.target;
                 tagsUstensils.innerHTML = '<h2>' + linkClicked.innerHTML +
-                '</h2><span class="close"><i class="icon-remove-circle"></i></span>';
+                    '</h2><span class="close"><img src="../img/cross.png" alt="close tag icon">';
             });
         });
         tagsUstensils.addEventListener('click', function (evt) {
@@ -66,7 +69,7 @@ let baseIng = function (data) {
             let tagNameClicked = event.target.innerHTML.trim().toLowerCase();
             tagsIngredients.style.display = "flex";
             tagsIngredients.innerHTML = '<h2>' + tagNameClicked +
-                '</h2><span class="close"><i class="icon-remove-circle"></i></span>';
+                '</h2><span class="close"><img src="../Rakotonirina_JeanSebastien_7_18122021_version2.0/img/cross.png" alt="close tag icon"></span>';
             for (let j = 0; j < data.length; j++) {
                 for (let k = 0; k < data[j].ingredients.length; k++) {
                     if (data[j].ingredients[k].ingredient.toLowerCase() == tagNameClicked) {

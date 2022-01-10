@@ -315,7 +315,8 @@ header, main, .tags, .dropdown {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: #3282F7;
+  align-items: center;
+  background: #3282f7;
   color: white;
   border-radius: 5px;
 }
@@ -325,11 +326,11 @@ header, main, .tags, .dropdown {
   font-weight: bold;
   font-size: 14px;
   line-height: 17px;
-  padding: 10px 0 10px 20px;
+  padding: 10px;
 }
-.tags_ingredients img {
-  width: 20px;
-  height: 25px;
+.tags_ingredients i {
+  font-weight: normal;
+  font-size: 1.4rem;
   padding: 5px;
   cursor: pointer;
 }
@@ -337,7 +338,8 @@ header, main, .tags, .dropdown {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: #ED6454;
+  align-items: center;
+  background: #ed6454;
   color: white;
   border-radius: 5px;
 }
@@ -347,11 +349,10 @@ header, main, .tags, .dropdown {
   font-weight: bold;
   font-size: 14px;
   line-height: 17px;
-  padding: 10px 0 10px 20px;
+  padding: 10px;
 }
-.tags_appliance img {
-  width: 20px;
-  height: 25px;
+.tags_appliance i {
+  font-size: 1.4rem;
   padding: 5px;
   cursor: pointer;
 }
@@ -359,7 +360,8 @@ header, main, .tags, .dropdown {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: #68D9A4;
+  align-items: center;
+  background: #68d9a4;
   color: white;
   border-radius: 5px;
 }
@@ -369,11 +371,10 @@ header, main, .tags, .dropdown {
   font-weight: bold;
   font-size: 14px;
   line-height: 17px;
-  padding: 10px 0 10px 20px;
+  padding: 10px;
 }
-.tags_ustensils img {
-  width: 20px;
-  height: 25px;
+.tags_ustensils i {
+  font-size: 1.4rem;
   padding: 5px;
   cursor: pointer;
 }
