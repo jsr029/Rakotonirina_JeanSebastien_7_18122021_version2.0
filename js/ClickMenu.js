@@ -10,7 +10,7 @@ class ClickMenu {
                 tagsIngredients.style.display = "flex";
                 let linkClicked = event.target;
                 tagsIngredients.innerHTML = '<h2>' + linkClicked.innerHTML +
-                    '</h2><span class="close"><img src="../img/cross.png" alt="close tag icon">';
+                '</h2><span class="close"><i class="icon-remove-circle"></i></span>';
             });
         });
         baseIng(data);
