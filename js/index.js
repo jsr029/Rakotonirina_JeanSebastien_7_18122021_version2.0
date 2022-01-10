@@ -5,6 +5,5 @@ import recipes from './recipes.js';
 import searchInput from './searchInput.js';
 searchInput(recipes);
 dropdown();
-new ClickMenu().render();
-new ClickMenu().search();
+new ClickMenu().render(recipes);
 dropSearch();

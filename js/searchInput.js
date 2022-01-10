@@ -1,4 +1,5 @@
 import DisplayRecipes from "./DisplayRecipes.js";
+import ClickMenu from "./ClickMenu.js";
 
 function searchInput(data) {
     let search = document.querySelector(".logoTitle_bloc-search");
@@ -43,6 +44,7 @@ function searchInput(data) {
         }
         newBaseFilteredConcated = [...new Set([...nameResult, ...ingredientsResult, ...descriptionResult, ...applianceResult, ...ustensilsResult])];
         newBaseFilteredConcated.sort((a, b) => b.name.localeCompare(a.name));
+        new ClickMenu().render(newBaseFilteredConcated);
         new DisplayRecipes().render(newBaseFilteredConcated);
     });
     //Affiche les recettes par ordre alphabetique
