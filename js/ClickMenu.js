@@ -83,7 +83,7 @@ let baseIng = function (data) {
     //When u close the tag, go back to initial data
     tagsIngredients.addEventListener("click", function (event) {
         new DisplayRecipes().render(data);
-        tagsIngredients.style.display = "flex";
+        tagsIngredients.style.display = "none";
     });
 
 };
