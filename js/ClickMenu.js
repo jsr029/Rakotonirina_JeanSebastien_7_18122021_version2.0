@@ -61,8 +61,8 @@ let baseIng = function (data) {
     let ingA = document.querySelectorAll('.dropdown_ingredients a');
     let tagsIngredients = document.querySelector('.tags_ingredients');
     let baseResult = [];
-//Loop all link in ingredients dropdown, listen to ckick event, display recipes 
-//wich contain tagNameClicked 
+    //Loop all link in ingredients dropdown, listen to ckick event, display recipes 
+    //wich contain tagNameClicked 
     for (let i = 0; i < ingA.length; i++) {
         ingA[i].addEventListener('click', function (event) {
             baseResult = [];
@@ -83,6 +83,7 @@ let baseIng = function (data) {
     //When u close the tag, go back to initial data
     tagsIngredients.addEventListener("click", function (event) {
         new DisplayRecipes().render(data);
+        tagsIngredients.style.display = "flex";
     });
 
 };
