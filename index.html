@@ -1,67 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/style.css">
-        <title>Les Petits Plats</title>
-<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-    </head>
-    <body>
-        <div class="container">
-            <header class="logoTitle">
-                <img src="./img/Logo.png" alt="les petits plats logo"
-                    class="logoTitle_logo">
-                <h1 class="logoTitle_title">Les petits plats</h1>
-                <span class="logoTitle_bloc">
-                    <input type="search" class="logoTitle_bloc-search"
-                        aria-label="global input to find recipes which contain
-                        the typing word" placeholder="Rechercher un ingrédient, un appareil, un ustensile ou une recette...">
-                    <img src="./img/Loupe.png" alt="loupe logo"
-                        class="logoTitle_bloc-loupe">
-                </span>
-            </header>
-            <div class="tags">
-                <div class="tags_ingredients"></div>
-                <div class="tags_appliance"></div>
-                <div class="tags_ustensils"></div>
-            </div>
-            <div class="dropdown">
-                <div class="dropdown_ingredients">
-                    <div class="dropdown_ingredients-button">
-                    <input type="text" class="dropdown_ingredients-buttonSearch"
-                        aria-label="input ingredients"
-                        placeholder="Rechercher un ingrédient...">
-                        <h2>Ingrédients</h2>
-                        <i class="icon-angle-down"></i>
-                    </div>
-                    <div class="ingredientsResult"></div>
-                </div>                
-                <div class="dropdown_appliance">
-                    <div class="dropdown_appliance-button">
-                    <input type="text" class="dropdown_appliance-buttonSearch"
-                        aria-label="input appliance"
-                        placeholder="Rechercher un appareil...">
-                        <h2>Appareils</h2>
-                        <i class="icon-angle-down"></i>
-                    </div>
-                    <div class="applianceResult"></div>
-                </div>
-                <div class="dropdown_ustensils">
-                    <div class="dropdown_ustensils-button">
-                    <input type="text" class="dropdown_ustensils-buttonSearch"
-                        aria-label="input ustensils"
-                        placeholder="Rechercher un ustensile...">
-                        <h2>Ustensiles</h2>
-                        <i class="icon-angle-down"></i>
-                    </div>
-                    <div class="ustensilsResult"></div>
-                </div>
-            </div>
-            <main class="content">
-            </main>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Les Petits Plats</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header class="logoTitle">
+            <img src="./img/Logo.png" alt="les petits plats logo" class="logoTitle_logo">
+            <h1 class="logoTitle_title">Les petits plats</h1>
+            <span class="logoTitle_bloc">
+                <input type="search" class="logoTitle_bloc-search" aria-label="global input to find recipes which contain
+                        the typing word"
+                    placeholder="Rechercher un ingrédient, un appareil, un ustensile ou une recette...">
+                <img src="./img/Loupe.png" alt="loupe logo" class="logoTitle_bloc-loupe">
+            </span>
+        </header>
+        <div class="tags">
+            <div class="tags_ingredients"></div>
+            <div class="tags_appliance"></div>
+            <div class="tags_ustensils"></div>
         </div>
-        <script src="./js/index.js" type="module"></script>
-    </body>
+        <div class="dropdown">
+            <div class="dropdown_ingredients">
+                <div class="dropdown_ingredients-button">
+                    <input type="text" class="dropdown_ingredients-buttonSearch" aria-label="input ingredients"
+                        placeholder="Rechercher un ingrédient...">
+                    <h2>Ingrédients</h2>
+                    <i class="icon-angle-down"></i>
+                </div>
+                <div class="ingredientsResult"></div>
+            </div>
+            <div class="dropdown_appliance">
+                <div class="dropdown_appliance-button">
+                    <input type="text" class="dropdown_appliance-buttonSearch" aria-label="input appliance"
+                        placeholder="Rechercher un appareil...">
+                    <h2>Appareils</h2>
+                    <i class="icon-angle-down"></i>
+                </div>
+                <div class="applianceResult"></div>
+            </div>
+            <div class="dropdown_ustensils">
+                <div class="dropdown_ustensils-button">
+                    <input type="text" class="dropdown_ustensils-buttonSearch" aria-label="input ustensils"
+                        placeholder="Rechercher un ustensile...">
+                    <h2>Ustensiles</h2>
+                    <i class="icon-angle-down"></i>
+                </div>
+                <div class="ustensilsResult"></div>
+            </div>
+        </div>
+        <main class="content">
+        </main>
+    </div>
+    <script src="./js/index.js" type="module"></script>
+</body>
+
 </html>
