@@ -71,7 +71,7 @@ let dropIList = function (data) {
     let dropListA = document.querySelector('.applianceResult');
     let boxIListA = [];
     for (let j = 0; j < data.length; j++) {
-            boxIListA.push(`
+        boxIListA.push(`
         <a class="dropdown-item" href="javascript:void(0)">
             ${data[j].appliance}
         </a>
@@ -85,16 +85,16 @@ let dropIList = function (data) {
     let boxIListU = [];
     for (let a = 0; a < data.length; a++) {
         for (let b = 0; b < data[a].ustensils.length; b++) {
-                boxIListU.push(`
+            boxIListU.push(`
             <a class="dropdown-item" href="javascript:void(0)">
                 ${data[a].ustensils[b].length > 15 ? data[a].ustensils[b].substr(0, 15)+'...' : data[a].ustensils[b]}
             </a>
             `);
         }
     }
-        boxIListU = [...new Set(boxIListU)];
-        boxIListU.sort();
-        dropListU.innerHTML = boxIListU.join('');
+    boxIListU = [...new Set(boxIListU)];
+    boxIListU.sort();
+    dropListU.innerHTML = boxIListU.join('');
 
 };
 export default searchInput;

@@ -1,4 +1,5 @@
-import DisplayRecipies from "./DisplayRecipes.js";
+import DisplayRecipes from "./DisplayRecipes.js";
+import recipes from "./recipes.js";
 
 class ClickMenu {
     render(data) {
@@ -54,29 +55,34 @@ class ClickMenu {
         });
     }
 }
-let baseIng = function (data = null) {
+// si pas de données dans input général, afficher données initiales avant input
+// vérifier au moment de l'appel
+let baseIng = function (data) {
     let ingA = document.querySelectorAll('.dropdown_ingredients a');
     let globalInput = document.querySelector('.logoTitle_bloc-search');
+    let tagsIngredients = document.querySelector('.tags_ingredients');
     let baseResult = [];
-    globalInput.addEventListener("input", function (elm) {
-        console.log(globalInput.textContent);
-        if (globalInput.value.length > 3) {
-            for (let i = 0; i < data.length; i++) {
-                for (let j = 0; j < data.length; j++) {
-                    if (data[i]) {
-                        //baseResult.push(data[i].ingredients[j].ingredient);
+    for (let i = 0; i < ingA.length; i++) {
+        ingA[i].addEventListener('click', function (event) {
+        baseResult = [];
+            let tagNameClicked = event.target.innerHTML.trim().toLowerCase();
+            tagsIngredients.style.display = "flex";
+            tagsIngredients.innerHTML = '<h2>' + tagNameClicked +
+                '</h2><span class="close"><img src="../img/cross.png" alt="close tag icon">';
+                for(let j=0; j < data.length; j++){
+                    for(let k=0; k < data[j].ingredients.length; k++){
+                        if(data[j].ingredients[k].ingredient.toLowerCase() == tagNameClicked){
+                            baseResult.push(data[j]);
+                        }
                     }
                 }
-            }
-        }
+                new DisplayRecipes().render(baseResult);
+                console.log(baseResult);
+        });
+    }
+    tagsIngredients.addEventListener("click", function(event){
+        new DisplayRecipes().render(data);
     });
-    ingA.forEach(e => e.addEventListener('click',
-        function (event) {
-            let link = event.target;
-            let wordClicked = link.innerHTML.trim();
-            baseResult.filter(el => el.toLowerCase().indexOf(wordClicked.toLowerCase()) !== -1);
-            new DisplayRecipies().render(baseResult);
-        }
-    ));
+
 };
 export default ClickMenu;
