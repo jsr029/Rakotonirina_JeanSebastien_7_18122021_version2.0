@@ -1,57 +1,10 @@
 import DisplayRecipes from "./DisplayRecipes.js";
-import recipes from "./recipes.js";
 
 class ClickMenu {
     render(data) {
-        let tagsIngredients = document.querySelector('.tags_ingredients');
-        let dropIA = document.querySelectorAll('.dropdown_ingredients a');
-        dropIA.forEach(function (elm) {
-            elm.addEventListener('click', function (event) {
-                tagsIngredients.style.display = "flex";
-                let linkClicked = event.target;
-                tagsIngredients.innerHTML = '<h2>' + linkClicked.innerHTML +
-                '</h2><span class="close"><i class="icon-remove-circle"></i></span>';
-            });
-        });
         baseIng(data);
-        tagsIngredients.addEventListener('click', function (evt) {
-            tagsIngredients.style.display = 'none';
-        });
-        let tagsAppliance = document.querySelector('.tags_appliance');
-        if (tagsAppliance.innerHTML.length == 0) {
-            tagsAppliance.style.display = 'none';
-        }
-        let dropAA = document.querySelectorAll('.dropdown_appliance a');
-        dropAA.forEach(function (elm) {
-            elm.addEventListener('click', function (event) {
-                tagsAppliance.style.display = "flex";
-                let linkClicked = event.target;
-                tagsAppliance.innerHTML = '<h2>' + linkClicked.innerHTML +
-                    '</h2><span class="close"><i class="icon-remove-circle"></i></span>';
-            });
-        });
         baseApp(data);
-        tagsAppliance.addEventListener('click', function (evt) {
-            tagsAppliance.style.display = 'none';
-        });
-
-        let tagsUstensils = document.querySelector('.tags_ustensils');
-        if (tagsUstensils.innerHTML.length == 0) {
-            tagsUstensils.style.display = 'none';
-        }
-        let dropUA = document.querySelectorAll('.dropdown_ustensils a');
-        dropUA.forEach(function (elm) {
-            elm.addEventListener('click', function (event) {
-                tagsUstensils.style.display = "flex";
-                let linkClicked = event.target;
-                tagsUstensils.innerHTML = '<h2>' + linkClicked.innerHTML +
-                    '</h2><span class="close"><i class="icon-remove-circle"></i></span>';
-            });
-        });
         baseUst(data);
-        tagsUstensils.addEventListener('click', function (evt) {
-            tagsUstensils.style.display = 'none';
-        });
     }
 }
 // si pas de données dans input général, afficher données initiales avant input
@@ -95,6 +48,7 @@ let baseIng = function (data) {
     }
     //When u close the tag, go back to initial data
     tagsIngredients.addEventListener("click", function (event) {
+        tagsIngredients.style.display = 'none';
         new DisplayRecipes().render(data);
     });
 
@@ -127,8 +81,8 @@ let baseApp = function (data) {
             tagsAppliance.innerHTML = '<h2>' + tagNameClicked +
                 '</h2><span class="close"><i class="icon-remove-circle"></i></span>';
             for (let j = 0; j < data.length; j++) {
-                    if (data[j].appliance.toLowerCase() == tagNameClicked) {
-                        baseResult.push(data[j]);
+                if (data[j].appliance.toLowerCase() == tagNameClicked) {
+                    baseResult.push(data[j]);
                 }
             }
             new DisplayRecipes().render(baseResult);
@@ -136,6 +90,7 @@ let baseApp = function (data) {
     }
     //When u close the tag, go back to initial data
     tagsAppliance.addEventListener("click", function (event) {
+        tagsAppliance.style.display = 'none';
         new DisplayRecipes().render(data);
     });
 
@@ -169,7 +124,7 @@ let baseUst = function (data) {
                 '</h2><span class="close"><i class="icon-remove-circle"></i></span>';
             for (let j = 0; j < data.length; j++) {
                 for (let k = 0; k < data[j].ustensils.length; k++) {
-                    if (data[j].ustensils[k].toLowerCase() == tagNameClicked) {
+                if (data[j].ustensils[k].toLowerCase() == tagNameClicked) {
                         baseResult.push(data[j]);
                     }
                 }
@@ -179,6 +134,7 @@ let baseUst = function (data) {
     }
     //When u close the tag, go back to initial data
     tagsUstensils.addEventListener("click", function (event) {
+        tagsUstensils.style.display = 'none';
         new DisplayRecipes().render(data);
     });
 

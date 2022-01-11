@@ -22,7 +22,7 @@ function dropdown() {
             iconI.className = 'icon-angle-up';
             h2I.style.display = 'none';
             inputI.style.display = 'block';
-            buttonI.style.width = '600px';
+            buttonI.style.width = '800px';
             buttonI.style.borderRadius = '5px 5px 0 0';
             ingredientsResult.style.display = 'flex';
 
@@ -87,7 +87,7 @@ function dropdown() {
             iconU.className = 'icon-angle-up';
             h2U.style.display = 'none';
             inputU.style.display = 'block';
-            buttonU.style.width = '500px';
+            buttonU.style.width = '630px';
             buttonU.style.borderRadius = '5px 5px 0 0';
             ustensilsResult.style.display = 'flex';
 

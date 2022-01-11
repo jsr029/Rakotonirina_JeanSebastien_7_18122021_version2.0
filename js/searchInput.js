@@ -59,7 +59,7 @@ let dropIList = function (data) {
         for (let j = 0; j < data[i].ingredients.length; j++) {
             boxIList.push(`
         <a class="dropdown-item" href="javascript:void(0)">
-            ${data[i].ingredients[j].ingredient.length > 15 ? data[i].ingredients[j].ingredient.substr(0,15)+'...':data[i].ingredients[j].ingredient}
+            ${data[i].ingredients[j].ingredient.length > 25 ? data[i].ingredients[j].ingredient.substr(0,25)+'...':data[i].ingredients[j].ingredient}
         </a>
         `);
         }
@@ -87,7 +87,7 @@ let dropIList = function (data) {
         for (let b = 0; b < data[a].ustensils.length; b++) {
             boxIListU.push(`
             <a class="dropdown-item" href="javascript:void(0)">
-                ${data[a].ustensils[b].length > 15 ? data[a].ustensils[b].substr(0, 15)+'...' : data[a].ustensils[b]}
+                ${data[a].ustensils[b].length > 25 ? data[a].ustensils[b].substr(0, 25)+'...' : data[a].ustensils[b]}
             </a>
             `);
         }

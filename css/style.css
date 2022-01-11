@@ -144,16 +144,10 @@ header, main, .tags, .dropdown {
 .dropdown i {
   cursor: pointer;
 }
-.tags_ingredients,
-.dropdown_ingredients {
-  max-width: 620px;
-  max-height: 400px;
-  background: #3282F7;
-}
 .tags_ingredients .ingredientsResult,
 .dropdown_ingredients .ingredientsResult {
   position: absolute;
-  max-width: 620px;
+  max-width: 820px;
   max-height: 400px;
   background: #3282F7;
   overflow: hidden;
@@ -168,7 +162,7 @@ header, main, .tags, .dropdown {
 }
 .tags_ingredients a,
 .dropdown_ingredients a {
-  width: 150px;
+  width: 210px;
   color: white;
   padding: 5px;
   font-size: 1.125rem;
@@ -204,7 +198,7 @@ header, main, .tags, .dropdown {
 .tags_ustensils .ustensilsResult,
 .dropdown_ustensils .ustensilsResult {
   position: absolute;
-  max-width: 520px;
+  max-width: 650px;
   display: none;
   flex-direction: row;
   flex-wrap: wrap;
@@ -216,7 +210,7 @@ header, main, .tags, .dropdown {
 }
 .tags_ustensils a,
 .dropdown_ustensils a {
-  width: 150px;
+  width: 200px;
   color: white;
   padding: 5px 5px 5px 10px;
   font-size: 1.125rem;
