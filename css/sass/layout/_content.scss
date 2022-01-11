@@ -7,35 +7,44 @@
     column-gap: 20px;
     row-gap: 20px;
     z-index: 1000;
-    i{
+
+    i {
         cursor: pointer;
     }
+
     &_ingredients {
+        max-width: 620px;
+        max-height: 400px;
+        background: #3282F7;
+
         .ingredientsResult {
             position: absolute;
             max-width: 620px;
             max-height: 400px;
+            background: #3282F7;
             overflow: hidden;
             display: none;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-around;
             color: white;
-            background: #3282F7;        
             border-radius: 0 0 5px 5px;
             z-index: 200;
             font-size: 1.125rem;
         }
-        a{
+
+        a {
             width: 150px;
             color: white;
             padding: 5px;
             font-size: 1.125rem;
-            &:hover{
+
+            &:hover {
                 background: lighten(#3282F7, 10%);
             }
         }
     }
+
     &_appliance {
         .applianceResult {
             position: absolute;
@@ -44,17 +53,19 @@
             flex-direction: row;
             flex-wrap: wrap;
             color: white;
-            background: #ED6454;        
+            background: #ED6454;
             border-radius: 0 0 5px 5px;
             z-index: 200;
             font-size: 1.125rem;
         }
-        a{
+
+        a {
             width: 150px;
             color: white;
             padding: 5px 5px 5px 10px;
             font-size: 1.125rem;
-            &:hover{
+
+            &:hover {
                 background: lighten(#ED6454, 10%);
             }
         }
@@ -68,22 +79,25 @@
             flex-direction: row;
             flex-wrap: wrap;
             color: white;
-            background: #68D9A4;        
+            background: #68D9A4;
             border-radius: 0 0 5px 5px;
             z-index: 200;
             font-size: 1.125rem;
         }
-        a{
+
+        a {
             width: 150px;
             color: white;
             padding: 5px 5px 5px 10px;
             font-size: 1.125rem;
-            &:hover{
+
+            &:hover {
                 background: lighten(#68D9A4, 10%);
             }
         }
     }
 }
+
 .dropdown_ingredients,
 .dropdown_appliance,
 .dropdown_ustensils {
@@ -112,6 +126,7 @@
     position: absolute;
     top: 17rem;
     z-index: 100;
+
     .articles_bloc {
         width: 380px;
         height: 364px;
@@ -126,7 +141,8 @@
             margin-left: 5px;
             float: left;
             line-height: 1rem;
-            .strong{
+
+            .strong {
                 font-weight: bold;
             }
         }

@@ -114,5 +114,10 @@ function dropdown() {
             ustensilsResult.style.display = 'none';
         }
     });
+    inputI.onblur = function () {
+        // ...and put the focus back
+        inputI.innerHTML='';
+    };
+
 }
 export default dropdown;

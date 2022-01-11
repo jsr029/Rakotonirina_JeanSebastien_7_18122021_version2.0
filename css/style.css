@@ -144,18 +144,24 @@ header, main, .tags, .dropdown {
 .dropdown i {
   cursor: pointer;
 }
+.tags_ingredients,
+.dropdown_ingredients {
+  max-width: 620px;
+  max-height: 400px;
+  background: #3282F7;
+}
 .tags_ingredients .ingredientsResult,
 .dropdown_ingredients .ingredientsResult {
   position: absolute;
   max-width: 620px;
   max-height: 400px;
+  background: #3282F7;
   overflow: hidden;
   display: none;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   color: white;
-  background: #3282F7;
   border-radius: 0 0 5px 5px;
   z-index: 200;
   font-size: 1.125rem;
