@@ -21,7 +21,7 @@ function dropdown() {
             iconI.className = 'icon-angle-up';
             h2I.style.display = 'none';
             inputI.style.display = 'block';
-            buttonI.style.width = '800px';
+            buttonI.style.minWidth = '800px';
             buttonI.style.borderRadius = '5px 5px 0 0';
             ingredientsResult.style.display = 'flex';
 
