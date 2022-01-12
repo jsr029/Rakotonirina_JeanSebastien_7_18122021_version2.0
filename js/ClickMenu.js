@@ -31,7 +31,7 @@ let baseIng = function (data) {
             buttonI.style.width = '150px';
             content.style.marginTop = '30px';
             buttonI.style.borderRadius = '5px';
-            baseResult = [];
+            //baseResult = [];
             let tagNameClicked = event.target.innerHTML.trim().toLowerCase();
             tagsIngredients.style.display = "flex";
             tagsIngredients.innerHTML = '<h2>' + tagNameClicked +
@@ -44,6 +44,7 @@ let baseIng = function (data) {
                 }
             }
             new DisplayRecipes().render(baseResult);
+
         });
     }
     //When u close the tag, go back to initial data
@@ -75,7 +76,7 @@ let baseApp = function (data) {
             buttonA.style.width = '150px';
             content.style.marginTop = '30px';
             buttonA.style.borderRadius = '5px';
-            baseResult = [];
+            //baseResult = [];
             let tagNameClicked = event.target.innerHTML.trim().toLowerCase();
             tagsAppliance.style.display = "flex";
             tagsAppliance.innerHTML = '<h2>' + tagNameClicked +
@@ -86,6 +87,7 @@ let baseApp = function (data) {
                 }
             }
             new DisplayRecipes().render(baseResult);
+
         });
     }
     //When u close the tag, go back to initial data
@@ -117,19 +119,20 @@ let baseUst = function (data) {
             buttonU.style.width = '150px';
             content.style.marginTop = '30px';
             buttonU.style.borderRadius = '5px';
-            baseResult = [];
+            //baseResult = [];
             let tagNameClicked = event.target.innerHTML.trim().toLowerCase();
             tagsUstensils.style.display = "flex";
             tagsUstensils.innerHTML = '<h2>' + tagNameClicked +
                 '</h2><span class="close"><i class="icon-remove-circle"></i></span>';
             for (let j = 0; j < data.length; j++) {
                 for (let k = 0; k < data[j].ustensils.length; k++) {
-                if (data[j].ustensils[k].toLowerCase() == tagNameClicked) {
+                    if (data[j].ustensils[k].toLowerCase() == tagNameClicked) {
                         baseResult.push(data[j]);
                     }
                 }
             }
             new DisplayRecipes().render(baseResult);
+            console.log(baseResult);
         });
     }
     //When u close the tag, go back to initial data

@@ -44,6 +44,7 @@ function searchInput(data) {
         }
         newBaseFilteredConcated = [...new Set([...nameResult, ...ingredientsResult, ...descriptionResult, ...applianceResult, ...ustensilsResult])];
         newBaseFilteredConcated.sort((a, b) => b.name.localeCompare(a.name));
+        dropIList(newBaseFilteredConcated);
         new ClickMenu().render(newBaseFilteredConcated);
         new DisplayRecipes().render(newBaseFilteredConcated);
     });

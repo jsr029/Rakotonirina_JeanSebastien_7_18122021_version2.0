@@ -16,7 +16,6 @@ function dropdown() {
     let iconU = document.querySelector('.dropdown_ustensils-button i');
     let h2U = document.querySelector('.dropdown_ustensils-button h2');
 
-
     iconI.addEventListener('click', function (event) {
         if (iconI.className == 'icon-angle-down') {
             iconI.className = 'icon-angle-up';
@@ -44,6 +43,7 @@ function dropdown() {
             iconI.className = 'icon-angle-down';
             h2I.style.display = 'block';
             inputI.style.display = 'none';
+            inputI.style.width = '150px';
             buttonI.style.width = '150px';
             buttonI.style.borderRadius = '5px';
             ingredientsResult.style.display = 'none';
