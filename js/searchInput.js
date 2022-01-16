@@ -23,7 +23,7 @@ function searchInput(data) {
         ustensilsResult = [];
         for (let d of data) {
             d.ingredients.filter(function (ing) {
-                if (ing.ingredient.toLowerCase().includes(globalInput.toLowerCase())) {
+                if (ing.ingredient.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
                     ingredientsResult.push(d);
                 }
             });
@@ -36,7 +36,6 @@ function searchInput(data) {
                 applianceResult.push(d);
             }
         }
-        console.log(applianceResult);
         newBaseFilteredConcated = [...new Set([...nameResult, ...ingredientsResult, ...descriptionResult, ...applianceResult, ...ustensilsResult])];
         newBaseFilteredConcated.sort((a, b) => b.name.localeCompare(a.name));
         dropIList(newBaseFilteredConcated);

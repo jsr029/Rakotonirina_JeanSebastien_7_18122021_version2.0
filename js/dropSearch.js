@@ -22,7 +22,7 @@ const ingredientsSearch = () => {
   for (i = 0; i < a.length; i++) {
     a2 = a[i];
     txtValue = a2.innerText;
-    if (txtValue.toLowerCase().includes(filter.toLowerCase())) {
+    if (txtValue.toLowerCase().trim().includes(filter.toLowerCase().trim())) {
       a[i].style.display = "";
     } else {
       a[i].style.display = "none";
