@@ -16,24 +16,24 @@ function searchInput(data) {
     search.addEventListener('input', function (evt) {
         let globalInput = search.value;
         if (globalInput.length > 3)
-        nameResult = [];
+            nameResult = [];
         descriptionResult = [];
         applianceResult = [];
         ingredientsResult = [];
         ustensilsResult = [];
         for (let d of data) {
-            d.ingredients.filter(function(ing){
-                if(ing.ingredient.toLowerCase().includes(globalInput.toLowerCase())){
+            d.ingredients.filter(function (ing) {
+                if (ing.ingredient.toLowerCase().includes(globalInput.toLowerCase())) {
                     ingredientsResult.push(d);
                 }
             });
-            d.ustensils.filter(function(ust){
-                if(ust.toLowerCase().includes(globalInput.toLowerCase())){
+            d.ustensils.filter(function (ust) {
+                if (ust.toLowerCase().includes(globalInput.toLowerCase())) {
                     ustensilsResult.push(d);
                 }
             });
-                if(d.appliance.toLowerCase().includes(globalInput.toLowerCase())){
-                    applianceResult.push(d);
+            if (d.appliance.toLowerCase().includes(globalInput.toLowerCase())) {
+                applianceResult.push(d);
             }
         }
         console.log(applianceResult);
