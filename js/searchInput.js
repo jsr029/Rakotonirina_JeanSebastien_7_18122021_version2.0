@@ -16,32 +16,27 @@ function searchInput(data) {
     search.addEventListener('input', function (evt) {
         let globalInput = search.value;
         if (globalInput.length > 3)
-            nameResult = [];
+        nameResult = [];
         descriptionResult = [];
         applianceResult = [];
         ingredientsResult = [];
         ustensilsResult = [];
-        for (let i = 0; i < data.length; i++) {
-            if (data[i].name.toLowerCase().includes(globalInput.toLowerCase())) {
-                nameResult.push(data[i]);
-            }
-            if (data[i].description.toLowerCase().includes(globalInput.toLowerCase())) {
-                descriptionResult.push(data[i]);
-            }
-            if (data[i].appliance.toLowerCase().includes(globalInput.toLowerCase())) {
-                applianceResult.push(data[i]);
-            }
-            for (let k = 0; k < data[i].ingredients.length; k++) {
-                if (data[i].ingredients[k].ingredient.toLowerCase().includes(globalInput.toLowerCase())) {
-                    ingredientsResult.push(data[i]);
+        for (let d of data) {
+            d.ingredients.filter(function(ing){
+                if(ing.ingredient.toLowerCase().includes(globalInput.toLowerCase())){
+                    ingredientsResult.push(d);
                 }
-            }
-            for (let k = 0; k < data[i].ustensils.length; k++) {
-                if (data[i].ustensils[k].toLowerCase().includes(globalInput.toLowerCase())) {
-                    ustensilsResult.push(data[i]);
+            });
+            d.ustensils.filter(function(ust){
+                if(ust.toLowerCase().includes(globalInput.toLowerCase())){
+                    ustensilsResult.push(d);
                 }
+            });
+                if(d.appliance.toLowerCase().includes(globalInput.toLowerCase())){
+                    applianceResult.push(d);
             }
         }
+        console.log(applianceResult);
         newBaseFilteredConcated = [...new Set([...nameResult, ...ingredientsResult, ...descriptionResult, ...applianceResult, ...ustensilsResult])];
         newBaseFilteredConcated.sort((a, b) => b.name.localeCompare(a.name));
         dropIList(newBaseFilteredConcated);
