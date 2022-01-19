@@ -2,6 +2,7 @@ import DisplayRecipes from "./DisplayRecipes.js";
 import ClickMenu from "./ClickMenu.js";
 
 function searchInput(data) {
+    const startTime = new Date().getTime();
     let search = document.querySelector(".logoTitle_bloc-search");
     let nameResult = [];
     let ingredientsResult = [];
@@ -10,10 +11,9 @@ function searchInput(data) {
     let ustensilsResult = [];
     let baseModified = [];
     let newBaseFilteredConcated = [];
-    var recepiesSort = [];
-    var ingred = new DisplayRecipes();
+    let recepiesSort = [];
+    let ingred = new DisplayRecipes();
     ingred.render(data);
-    let ingre = ingred.uniqueIngredients;
     search.addEventListener('input', function (evt) {
         let globalInput = search.value;
         if (globalInput.length > 3)
@@ -58,9 +58,10 @@ function searchInput(data) {
         newBaseFilteredConcated = [...new Set([...nameResult, ...ingredientsResult, ...descriptionResult, ...applianceResult, ...ustensilsResult])];
         newBaseFilteredConcated.sort((a, b) => b.name.localeCompare(a.name));
         dropIList(newBaseFilteredConcated);
-        console.log(newBaseFilteredConcated);
         new ClickMenu().render(newBaseFilteredConcated);
         new DisplayRecipes().render(newBaseFilteredConcated);
+        const endTime = new Date().getTime();
+        console.log(`time taken ${(endTime - startTime)/1000} seconds`);
     });
     //Affiche les recettes par ordre alphabetique
     recepiesSort = data.sort((a, b) => b.name.localeCompare(a.name));
