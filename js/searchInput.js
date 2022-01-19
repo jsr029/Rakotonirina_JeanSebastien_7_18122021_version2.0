@@ -8,6 +8,7 @@ function searchInput(data) {
     let descriptionResult = [];
     let applianceResult = [];
     let ustensilsResult = [];
+    let baseModified = [];
     let newBaseFilteredConcated = [];
     var recepiesSort = [];
     var ingred = new DisplayRecipes();
@@ -21,24 +22,43 @@ function searchInput(data) {
         applianceResult = [];
         ingredientsResult = [];
         ustensilsResult = [];
-        for (let d of data) {
-            d.ingredients.filter(function (ing) {
+        baseModified = data.map(item => {
+            const base = {};
+            base.id = item.id;
+            base.name = item.name;
+            base.servings = item.servings;
+            base.time = item.time;
+            base.appliance = item.appliance;
+            base.ustensils = item.ustensils;
+            base.description = item.description;
+            base.ingredients = item.ingredients.map(it => {
+                const ing = {};
+                ing.ingredient = it.ingredient;
+                ing.unit = it.unit ? it.unit : '';
+                ing.quantity = it.quantity;
+                return ing;
+            });
+            return base;
+        });
+        baseModified.forEach(elm => {
+            elm.ingredients.filter(function (ing) {
                 if (ing.ingredient.toLowerCase().trim().includes(globalInput.toLowerCase().trim())) {
-                    ingredientsResult.push(d);
+                    ingredientsResult.push(elm);
                 }
             });
-            d.ustensils.filter(function (ust) {
+            elm.ustensils.filter(function (ust) {
                 if (ust.toLowerCase().includes(globalInput.toLowerCase())) {
-                    ustensilsResult.push(d);
+                    ustensilsResult.push(elm);
                 }
             });
-            if (d.appliance.toLowerCase().includes(globalInput.toLowerCase())) {
-                applianceResult.push(d);
+            if (elm.appliance.toLowerCase().includes(globalInput.toLowerCase())) {
+                applianceResult.push(elm);
             }
-        }
+        });
         newBaseFilteredConcated = [...new Set([...nameResult, ...ingredientsResult, ...descriptionResult, ...applianceResult, ...ustensilsResult])];
         newBaseFilteredConcated.sort((a, b) => b.name.localeCompare(a.name));
         dropIList(newBaseFilteredConcated);
+        console.log(newBaseFilteredConcated);
         new ClickMenu().render(newBaseFilteredConcated);
         new DisplayRecipes().render(newBaseFilteredConcated);
     });
