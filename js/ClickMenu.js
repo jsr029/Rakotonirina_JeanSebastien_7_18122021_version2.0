@@ -61,15 +61,7 @@ class ClickMenu {
         //When u close the tag, go back to initial data
         tagsIngredients.addEventListener("click", function (event) {
             tagsIngredients.style.display = 'none';
-            this.baseIngredient = [];
-            this.tagsIngredient = [];
-            this.baseAppliance = [];
-            this.tagsAppliance = [];
-            this.baseUstensil = [];
-            this.tagsUstensil = [];
-            dropIList(recipes);
-            new ClickMenu().render(recipes);
-            new DisplayRecipes().render(recipes);
+            location.reload();
         });
 
     }
@@ -115,15 +107,7 @@ class ClickMenu {
         //When u close the tag, go back to initial data
         tagsAppliance.addEventListener("click", function (event) {
             tagsAppliance.style.display = 'none';
-            this.baseIngredient = [];
-            this.tagsIngredient = [];
-            this.baseAppliance = [];
-            this.tagsAppliance = [];
-            this.baseUstensil = [];
-            this.tagsUstensil = [];
-            dropIList(recipes);
-            new ClickMenu().render(recipes);
-            new DisplayRecipes().render(recipes);
+            location.reload();
         });
 
     }
@@ -171,15 +155,7 @@ class ClickMenu {
         //When u close the tag, go back to initial data
         tagsUstensils.addEventListener("click", function (event) {
             tagsUstensils.style.display = 'none';
-            this.baseIngredient = [];
-            this.tagsIngredient = [];
-            this.baseAppliance = [];
-            this.tagsAppliance = [];
-            this.baseUstensil = [];
-            this.tagsUstensil = [];
-            dropIList(recipes);
-            new ClickMenu().render(recipes);
-            new DisplayRecipes().render(recipes);
+            location.reload();
         });
 
     }
