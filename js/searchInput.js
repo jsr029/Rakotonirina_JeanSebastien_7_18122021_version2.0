@@ -2,8 +2,7 @@ import DisplayRecipes from "./DisplayRecipes.js";
 import ClickMenu from "./ClickMenu.js";
 
 function searchInput(data) {
-    const startTime = new Date().getTime();
-    let search = document.querySelector(".logoTitle_bloc-search");
+     let search = document.querySelector(".logoTitle_bloc-search");
     let nameResult = [];
     let ingredientsResult = [];
     let descriptionResult = [];
@@ -60,9 +59,7 @@ function searchInput(data) {
         dropIList(newBaseFilteredConcated);
         new ClickMenu().render(newBaseFilteredConcated);
         new DisplayRecipes().render(newBaseFilteredConcated);
-        const endTime = new Date().getTime();
-        console.log(`time taken ${(endTime - startTime)/1000} seconds`);
-    });
+   });
     //Affiche les recettes par ordre alphabetique
     recepiesSort = data.sort((a, b) => b.name.localeCompare(a.name));
     new DisplayRecipes().render(recepiesSort);
